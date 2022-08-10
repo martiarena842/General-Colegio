@@ -1,0 +1,60 @@
+select COD_CLIENTE,NOMBRE,APELLIDO from CLIENTES ORDER BY COD_CLIENTE ASC;
+#2)
+select COD_CLIENTE as "Codigo de Cliente", APELLIDO as "Apellido", NOMBRE as "Nombre" from CLIENTES ORDER BY APELLIDO AND NOMBRE ASC;
+#3)
+select COD_PLANTA, DESCRIPCION, PRECIO from PLANTAS ORDER BY COD_PLANTA DESC;
+#4)
+select DESCRIPCION as Nomnre de Planta, STOCK as Stock Actual from PLANTAS ORDER BY DESCRIPCION;
+#5)
+select NOMBRE from LOCALIDADES ORDER BY ASC;
+#6)
+select concat(APELLIDO,', ',NOMBRE) as "Nombre y Apellido", COD_CLIENTE from CLientes;
+#7)
+select *, (PRECIO*0.1) as "Precio Descuento" from PLANTAS;
+#8)
+select DESCRIPCION, PRECIO *STOCK from PLANTAS;
+#9)
+select COD_CLIENTE,NOMBRE,APELLIDO from CLIENTES where DEUDOR = "S";
+#10)
+select * from PLANTAS Where STOCK > 20 ORDER BY STOCK;
+#11)
+select * from PLANTAS where STOCK != 30 ORDER BY COD_PLANTA;
+#12)
+select * from FACTURAS where DATE(FECHA)>"2009/06/01"
+#13)
+select * from PLANTAS where STOCK < 10;
+#14)
+select * from FACTURAS where FECHA BETWEEN "2008/06/01" and "2010/03/01";
+#15)
+select * from PLANTAS where Precio BETWEEN 20 and 70;
+#16)
+select DESCRIPCION,STOCK,PRECIO from PLANTAS where STOCK BETWEEN 5 and 10;
+#17)
+select * from CLIENTES where APELLIDOS like 'F%';
+#18)
+select * from CLIENTES Where NOMBRE like '%u%';
+#19)
+select * from CLIENTES where APELLIDO not like 'A%' and APELLIDO not like 'B%' and APELLIDO not like 'C%';
+#20)
+select * from CLIENTES where APELLIDOS like '%ez';
+#21)
+select * from CLIENTES where APELLIDOS not like 'P%';
+#22)
+select * from CLIENTES where APELLIDOS not like 'P%' and APELLIDOS not like 'Z%';
+#23)
+select * from CLIETNES where telefono is null;
+#24)
+select APELLIDO,NOMBRE,E-MAIL from CLIENTES where E-MAIL is not null;
+#25)
+select APELLIDO,NOMBRE,TELEFONO from CLIENTES where TELEFONO is not null;
+#26)
+select * from PLANTAS where DESCRIPCION like 'R%' and PRECIO > 7;
+#27)
+select * from PLANTAS where PRECIO < 30 or PRECIO > 80 ORDER BY COD_PLANTA;
+#28)
+select APELLIDO,NOMBRE, EMAIL from CLIENTES where email is not null or telefono is not null;
+#29)
+select * from CLIENTES where NOMBRE not like 'M%' and NOMBRE not like 'P%' or APELLIDO like 'B%';
+#30)
+select * from PLANTAS where STOCK >10 and STOCK < 30 ORDER BY DESCRIPCION;
+
